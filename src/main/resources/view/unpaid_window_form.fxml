@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UnpaidWindowFormController">
+   <children>
+      <TableView fx:id="tblStudents" layoutX="34.0" layoutY="113.0" onMouseClicked="#tblStudentsOnMouseClicked" prefHeight="419.0" prefWidth="864.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <columns>
+            <TableColumn fx:id="colStdId" prefWidth="164.0" text="ID" />
+            <TableColumn fx:id="colStdName" prefWidth="212.0" text="Name" />
+            <TableColumn fx:id="colStdAddress" prefWidth="272.0" text="Address" />
+            <TableColumn fx:id="colMobile" prefWidth="199.0" text="Mobile" />
+         </columns>
+      </TableView>
+      <Label layoutX="101.0" layoutY="24.0" text="View Un-Paid Students">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="789.0" layoutY="80.0" text="Students List">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="67.0" prefHeight="1.0" prefWidth="864.0" />
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="23.0" onAction="#btnBackOnAction" prefHeight="29.0" prefWidth="69.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

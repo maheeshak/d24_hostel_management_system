@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="932.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservationWindowFormController">
+    <children>
+        <Label layoutX="59.0" layoutY="14.0" text="Manage Reservations" textFill="#112d4e">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblReservations" layoutX="19.0" layoutY="100.0" onMouseClicked="#tblReservationsOnMouseClicked" prefHeight="200.0" prefWidth="898.0">
+            <columns>
+                <TableColumn fx:id="colReservationId" prefWidth="137.99996948242188" text="Reservation ID" />
+                <TableColumn fx:id="colStudentId" prefWidth="190.0" text="Student ID" />
+                <TableColumn fx:id="colDate" prefWidth="183.0" text="Date" />
+                <TableColumn fx:id="colRoomType" prefWidth="231.0" text="Room Type" />
+                <TableColumn fx:id="colStatus" prefWidth="143.0" text="Status" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tblRoom" layoutX="18.0" layoutY="349.0" prefHeight="200.0" prefWidth="898.0">
+            <columns>
+                <TableColumn fx:id="colRoomID" prefWidth="231.0" text="Room ID" />
+                <TableColumn fx:id="colType" prefWidth="262.0" text="Type" />
+                <TableColumn fx:id="colKeyMoney" prefWidth="247.0" text="Key Money" />
+                <TableColumn fx:id="colQty" prefWidth="146.0" text="Qty" />
+            </columns>
+        </TableView>
+        <ButtonBar layoutX="736.0" layoutY="674.0" prefHeight="40.0" prefWidth="319.0" />
+        <ButtonBar layoutX="17.0" layoutY="48.0" prefHeight="27.0" prefWidth="898.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+            <buttons>
+                <JFXButton fx:id="btnViewUnpaidStudent" buttonType="RAISED" onAction="#btnViewUnpaidStudentOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: lightyellow;" text="View Unpaid">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnAddReservation" buttonType="RAISED" onAction="#btnAddReservationOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: lightgreen;" text="New Reservation">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+            </buttons>
+        </ButtonBar>
+        <ButtonBar layoutX="17.0" layoutY="310.0" prefHeight="27.0" prefWidth="898.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+            <buttons>
+                <JFXButton fx:id="btnMarkAsPaid" buttonType="RAISED" onAction="#btnMarkAsPaidOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Mark as paid">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ff9999;" text="Delete">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
